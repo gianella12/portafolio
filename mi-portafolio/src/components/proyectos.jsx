@@ -23,19 +23,19 @@ export const Proyectos = () => {
                   setActiveProject(proyecto)
                   setModo("general")
                 }}
-                className={`relative rounded-3xl overflow-hidden bg-gradient-to-br from-gray-600 via-gray-700 to-gray-400
+                className={`relative rounded-3xl  bg-gradient-to-br from-gray-600 via-gray-700 to-gray-400
                 flex flex-col items-start hover:scale-105 hover:contrast-125 transform-gpu will-change-transform
                 transition col-span-1 min-h-[180px] `}
               >
-                <span className="absolute bottom-5 left-0 font-bold text-2xl p-3">
+                <span className="absolute bottom-5 left-0 font-bold text-xl p-3 ">
                   {proyecto.nombre}
                 </span>
-                <span className="absolute top-2 left-2 text-md  p-1 flex gap-1 overflow-visible">
+                <span className="absolute top-2 left-2 text-md p-1 flex flex-wrap gap-1">
                   {proyecto.tecnologias.map((tec, i) =>
                     typeof tec === "string" ? (
-                      <span key={i}>{tec}</span>
+                      <span  key={i}>{tec}</span>
                     ) : (
-                      <span key={i}>{tec}</span>
+                      <span  key={i}>{tec}</span>
                     )
                   )}
                 </span>
