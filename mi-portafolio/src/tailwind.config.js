@@ -2,6 +2,7 @@
 const animaciones = require('@midudev/tailwind-animations');
 
 module.exports = {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,jsx,ts,tsx}"
