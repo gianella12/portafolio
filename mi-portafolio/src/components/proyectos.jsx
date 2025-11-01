@@ -14,8 +14,8 @@ export const Proyectos = () => {
 
         <h1 className="m-7 ml-1">Mis proyectos</h1>
 
-        <div className="grid grid-cols-2 gap-4 items-start">
-          <div className="grid grid-cols-2 grid-rows-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-start">
+          <div className="grid grid-cols-1 sm:grid-cols-2 grid-rows-2 gap-6 ">
             {proyectosData.map((proyecto) => (
               <div
                 key={proyecto.id}
