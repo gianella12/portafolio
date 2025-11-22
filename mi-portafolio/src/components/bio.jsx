@@ -31,7 +31,7 @@ export function Bio() {
         </p>
 
         <div className="flex justify-center md:justify-start gap-4 mt-4">
-          <a href="mailto:gianellalastra4@gmail.com">
+          <a href="mailto:gianellalastra4@gmail.com" >
             <SiGmail size={34} />
           </a>
           <a href="https://www.linkedin.com/in/gianella-carla-lastra/">
