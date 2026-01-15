@@ -3,7 +3,6 @@ export const VerImg = ({ img, onClose }) => {
     return (
         <div
             className="fixed inset-0 flex items-center justify-center bg-black/80 "
-
         >
             <div className="relative">
                 <img

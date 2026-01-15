@@ -1,58 +1,68 @@
-
-import fotoPerfilJpeg from "../assets/imagen.jpeg"
+import { motion } from "framer-motion";
+import fotoPerfilJpeg from "../assets/imagen.jpeg";
 import imagenWebp from "../assets/imagen.webp";
-import { SiGmail } from "react-icons/si";
-import { FaLinkedin } from "react-icons/fa6";
-import { FaGithub, FaDownload } from "react-icons/fa";
 
 export function Bio() {
   return (
-    <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12 p-6 bg-[#171a4a] rounded-lg">
-
-      <div className="flex-shrink-0">
-        <picture>
-          <source srcSet={imagenWebp} type="image/webp" />
-          <source srcSet={fotoPerfilJpeg} type="image/jpeg" />
-          <img
-            src={fotoPerfilJpeg}
-            alt="Gianella"
-            className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover"
-          />
-        </picture>
-      </div>
-
-
-      <div className="text-center md:text-left">
-        <h1 className="text-2xl font-bold mb-4">Desarrolladora Full Stack Junior</h1>
-        <p className="break-words overflow-hidden text-wrap">
-          Hola soy Gianella, desarrolladora web junior. Me especializo en construir
-          interfaces simples y atractivas que ayudan a los usuarios a disfrutar de
-          la tecnología sin complicaciones.
-        </p>
-
-        <div className="flex justify-center md:justify-start gap-4 mt-4">
-          <a href="mailto:gianellalastra4@gmail.com" >
-            <SiGmail size={34} />
-          </a>
-          <a href="https://www.linkedin.com/in/gianella-carla-lastra/">
-            <FaLinkedin size={34} />
-          </a>
-          <a href="https://github.com/gianella12">
-            <FaGithub size={34} />
-          </a>
-          <a
-            href="/CV_GianellaLastra.pdf"
-            download="CV-Gianella-Lastra.pdf"
-            className="flex items-center gap-2 bg-[#2f2c79] text-white px-4 py-2 rounded hover:bg-[#2f2c84] transition"
+    <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="relative mx-auto mt-14 w-[560px] rounded-2xl  p-[1px]"
+    >
+      <div className="rounded-2xl px-8 py-10 backdrop-blur">
+        <div className="flex flex-col items-center text-center">
+          {/* Avatar */}
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="relative mb-6"
           >
-            <FaDownload />
-            Descargar CV
-          </a>
+            <div className="absolute -inset-1 rounded-full bg-gradient-to-tr from-violet-500 to-cyan-400 blur opacity-70" />
+            <picture className="relative block">
+              <source srcSet={imagenWebp} type="image/webp" />
+              <source srcSet={fotoPerfilJpeg} type="image/jpeg" />
+              <img
+                src={fotoPerfilJpeg}
+                alt="Gianella"
+                className="h-40 w-40 rounded-full object-cover"
+              />
+            </picture>
+          </motion.div>
+
+          {/* Título */}
+          <motion.h1
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.35 }}
+            className="text-xl font-semibold tracking-tight text-white"
+          >
+            Desarrolladora Full Stack Junior
+          </motion.h1>
+
+          {/* Bio */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className="mt-4 text-sm leading-relaxed text-white/80"
+          >
+            Hola, soy Gianella. Desarrollo interfaces claras y modernas, enfocadas
+            en que la experiencia del usuario sea simple, fluida y agradable.
+            Me gusta escribir código ordenado y seguir buenas prácticas.
+          </motion.p>
+
+          {/* Línea decorativa */}
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ delay: 0.7, duration: 0.4 }}
+            className="mt-6 h-px w-24 origin-left bg-gradient-to-r from-violet-400 to-cyan-400"
+          />
         </div>
       </div>
-    </div>
+    </motion.section>
   );
 }
 
-//   )
-// }
