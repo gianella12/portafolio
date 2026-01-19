@@ -13,10 +13,13 @@ function App() {
 
   return (
     <>
-      <section className="min-h-screen bg-[#464456] text-white p-6">
+      <section className="min-h-screen bg-[#464456] text-white px-4 py-6 sm:px-6">
         <div className="">
-          <div className="fixed top-4 right-4 flex  gap-4">
-            <a href="mailto:gianellalastra4@gmail.com" >
+          <div className="   static
+    sm:fixed sm:top-4 sm:right-4
+    flex gap-4
+    z-50">
+            <a href="gianellalastra4@gmail.com" >
               <SiGmail size={34} />
             </a>
             <a href="https://www.linkedin.com/in/gianella-carla-lastra/">
@@ -28,18 +31,32 @@ function App() {
             <a
               href="/CV_GianellaLastra.pdf"
               download="gianella_lastra_cv.pdf"
-              className="flex items-center gap-2 bg-[#2f2c79] text-white px-4 py-2 rounded hover:bg-[#2f2c84] transition"
+              className="  flex items-center gap-2 
+        bg-[#2f2c79] text-white 
+        px-3 py-2 text-sm
+        rounded-lg 
+        hover:bg-[#2f2c84] 
+        transition"
             >
               <FaDownload />
-              Descargar CV
+              <span className="hidden sm:inline">Descargar CV</span>
             </a>
           </div>
 
-          <Bio />
+          {/* <Bio />
           <div className='flex justify-center mt-9'>
-            <AcordeonStack/>
+            <AcordeonStack />
           </div>
-          <Proyectos />
+          <Proyectos /> */}
+          <div className="max-w-6xl mx-auto">
+            <Bio />
+
+            <div className="flex justify-center mt-8 px-2">
+              <AcordeonStack />
+            </div>
+
+            <Proyectos />
+          </div>
 
         </div>
       </section>
