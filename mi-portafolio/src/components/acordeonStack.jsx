@@ -19,7 +19,7 @@ export function AcordeonStack() {
     const [abierto, setAbierto] = useState(false);
 
     const item =
-        "group flex items-center justify-center h-14 w-14 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md";
+        "group flex items-center justify-center mt-2 h-14 w-14 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md";
 
     const icono =
         "text-2xl text-neutral-700 transition-colors duration-200";

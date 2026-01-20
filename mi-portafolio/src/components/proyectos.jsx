@@ -16,15 +16,21 @@ export const Proyectos = () => {
         </h2>
       </div>
       <div className="flex justify-center">
-        <div className="w-full max-w-[720px]">
+        <div className="w-full max-w-[760px]">
           <div className="flex justify-center sm:justify-end mb-3 sm:mb-4">
             <button
               onClick={() => setModo(modo === "general" ? "tecnica" : "general")}
               className="
-                text-sm
-                text-white/70
-                hover:text-white
-                transition
+                 text-xs sm:text-sm
+    px-3 sm:px-4
+    py-1.5 sm:py-2
+    rounded-lg
+    bg-white/5
+    text-white/70
+    hover:text-white
+    hover:bg-white/10
+    transition
+    cursor-pointer
               "
             >
               {modo === "general"

@@ -9,15 +9,13 @@ import { AcordeonStack } from './components/acordeonStack';
 
 
 function App() {
-
-
   return (
     <>
-      <section className="min-h-screen bg-[#464456] text-white px-4 py-6 sm:px-6">
+      <section className="min-h-screen fondo-vivo py-6 sm:px-6 text-white">
         <div className="">
-          <div className="   static
+          <div className="static
     sm:fixed sm:top-4 sm:right-4
-    flex gap-4
+    flex items-center justify-center gap-4
     z-50">
             <a href="gianellalastra4@gmail.com" >
               <SiGmail size={34} />
@@ -29,7 +27,7 @@ function App() {
               <FaGithub size={34} />
             </a>
             <a
-              href="/CV_GianellaLastra.pdf"
+              href="/gianella_lastra_cv.pdf"
               download="gianella_lastra_cv.pdf"
               className="  flex items-center gap-2 
         bg-[#2f2c79] text-white 
@@ -43,11 +41,6 @@ function App() {
             </a>
           </div>
 
-          {/* <Bio />
-          <div className='flex justify-center mt-9'>
-            <AcordeonStack />
-          </div>
-          <Proyectos /> */}
           <div className="max-w-6xl mx-auto">
             <Bio />
 
