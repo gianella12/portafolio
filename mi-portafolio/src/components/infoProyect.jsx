@@ -49,7 +49,7 @@ export const proyectosData = [
   {
     id: "registroDeLlamadas",
     nombre: "Registro de llamadas",
-    descripcion: "Aplicación web para gestionar y visualizar llamadas generadas de manera eficiente. Permite crear una cantidad determinada de llamadas, editarlas desde el destino al origen y almacenarlas de forma segura en su propia base de datos. Esta herramienta combina React, Node.js y MySQL, ofreciendo una experiencia dinámica y confiable tanto para la visualización como para la gestión de datos.",
+    descripcion: "Aplicación web para gestionar y visualizar llamadas generadas de manera eficiente. Permite crear una cantidad determinada de llamadas, editarlas desde el destino al origen y almacenarlas de forma segura en su propia base de datos.",
     descpcionTecnica: " La aplicación permite generar, visualizar, editar y eliminar llamadas, practicando operaciones CRUD completas. En el backend, se construyó un servidor REST organizado mediante controladores y rutas, con validación de datos y consultas parametrizadas para mayor seguridad al interactuar con la base de datos. Este proyecto me permitió aprender y aplicar la comunicación entre frontend y backend, el manejo de estados complejos en React, la creación de componentes reutilizables y la integración con MySQL, consolidando mis conocimientos en solicitudes CRUD y la gestión de la información de manera estructurada y eficiente.",
     tecnologias: [
       "react",
@@ -66,7 +66,7 @@ export const proyectosData = [
   {
     id: "administradorDeTareas",
     nombre: "Administrador de tareas",
-    descripcion: "El Administrador de tareas es una aplicación web sencilla y funcional que permite al usuario gestionar sus pendientes de forma intuitiva. Con esta herramienta, se pueden crear nuevas tareas, editarlas, marcarlas como completadas y eliminarlas cuando ya no sean necesarias. Fue el primer paso en el desarrollo de una serie de aplicaciones orientadas a la gestión de datos, y sirvió como base para el proyecto Registro de llamadas falsas, donde se aplicaron conceptos similares pero con tecnologías más modernas y una estructura más compleja.",
+    descripcion: "Es una aplicacion sencilla y funcional que permite al usuario gestionar sus pendientes de forma intuitiva. Con esta herramienta, se pueden crear nuevas tareas, editarlas, marcarlas como completadas y eliminarlas cuando ya no sean necesarias.",
     descpcionTecnica: "Es una aplicación web construida con HTML5, CSS3 y JavaScript puro, que permite realizar operaciones CRUD sobre una lista de tareas. Utiliza manipulación del DOM, eventos como click y submit, y estructuras en memoria para gestionar las tareas sin recargar la página. Su diseño moderno se logra mediante gradientes y estilos personalizados en CSS.Este proyecto fue el punto de partida para desarrollar Registro de llamadas falsas, donde se aplicaron los mismos principios con tecnologías más robustas como React, Node.js y MySQL.",
     tecnologias: [
       "html",

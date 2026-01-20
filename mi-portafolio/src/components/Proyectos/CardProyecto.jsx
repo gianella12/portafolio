@@ -6,13 +6,11 @@ export default function CardProyecto({ modo, activeProject, setImg, imgSeleccion
       <div
         className="
         bg-white
-    p-4 sm:p-6
-    rounded-xl
-    w-full
-    max-w-[640px]
-    max-h-[80vh]
-    overflow-hidden
-    mx-auto
+        p-4 sm:p-6
+        rounded-xl
+        w-full sm:w-[640px]
+        max-h-[80vh] sm:h-[620px]
+        overflow-hidden
       "
       >
         {modo === "general" ? (
