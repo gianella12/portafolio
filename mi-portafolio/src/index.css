@@ -1,26 +1,26 @@
-@import "tailwindcss"; /* reemplaza @tailwind base */
+@import "tailwindcss";
 
 @keyframes luz {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
 @keyframes respiracion {
-  0%, 100% { filter: brightness(0.85); }
-  50% { filter: brightness(1.1); }
+  0%, 100% { filter: brightness(0.9); }
+  50%       { filter: brightness(1.05); }
 }
 
 .fondo-vivo {
   background: linear-gradient(
-    120deg,
-    #020617, /* casi negro azul */
-    #0f172a, /* azul noche */
-    #1d4ed8, /* azul eléctrico */
-    #7c3aed  /* violeta */
+    135deg,
+    #020617,
+    #080d1a,
+    #0c1628,
+    #080d1a
   );
-  background-size: 500% 500%;
+  background-size: 400% 400%;
   animation:
-    luz 32s ease infinite,
-    respiracion 11s ease-in-out infinite;
+    luz 45s ease infinite,
+    respiracion 16s ease-in-out infinite;
 }
