@@ -24,7 +24,18 @@ import imgPokemon2Webp from '../assets/pokemon2.webp'
 import imgPokemon3Webp from '../assets/pokemon3.webp'
 import imgPokemon4Webp from '../assets/pokemon4.webp'
 import imgPokemon5Webp from '../assets/pokemon5.webp'
-
+import imgSpotia1Jpeg from '../assets/imgSpotia1.jpeg'
+import imgSpotia1Webp from '../assets/imgSpotia1.webp'
+import imgSpotia2Jpeg from '../assets/imgSpotia2.jpeg'
+import imgSpotia2Webp from '../assets/imgSpotia2.webp'
+import imgSpotia3Jpeg from '../assets/imgSpotia3.jpeg'
+import imgSpotia3Webp from '../assets/imgSpotia3.webp'
+import imgSpotia4Jpeg from '../assets/imgSpotia4.jpeg'
+import imgSpotia4Webp from '../assets/imgSpotia4.webp'
+import imgSpotia5Jpeg from '../assets/imgSpotia5.jpeg'
+import imgSpotia5Webp from '../assets/imgSpotia5.webp'
+import imgSpotia6Jpeg from '../assets/imgSpotia6.jpeg'
+import imgSpotia6Webp from '../assets/imgSpotia6.jpeg'
 
 
 export const proyectosData = [
@@ -108,4 +119,23 @@ export const proyectosData = [
     imagenesWebp: [imgPokemon1Webp, imgPokemon2Webp, imgPokemon3Webp, imgPokemon4Webp, imgPokemon5Webp],
     colores: "from-gray-700 via-green-700 to-gray-700"
   },
+   {                                                                             
+    id: "appSpotia",                                                            
+    nombre: "Spotia",                                                           
+    descripcion: "Una aplicación web que analiza tu historial de escucha en Spotify y genera un perfil musical personalizado con inteligencia artificial. Descubre tu alineación D&D musical, análisis emocional, tendencia de voto y genera playlists mediante prompts en lenguaje natural.",                      
+    descpcionTecnica: "Aplicación full-stack construida con Next.js (App Router) que integra la API de Spotify mediante OAuth 2.0 para obtener los artistas y canciones más escuchadas del usuario. Utiliza la API de Google Gemini (con soporte para Claude y OpenAI) para generar perfiles musicales y playlists personalizadas. La base de datos es PostgreSQL gestionada con Drizzle ORM, e incluye un sistema de caché de generaciones de IA para optimizar el uso de la API. El entorno de desarrollo se containeriza con Docker. El proyecto me permitió profundizar en autenticación OAuth, integración de múltiples APIs de IA, manejo de caché y arquitectura de aplicaciones full-stack modernas.",
+    tecnologias: [
+      "react",
+      "nextjs",
+      "typescript",
+      "tailwind",
+      "postgresql",                                                             
+      "drizzle",
+      "docker",                                                                 
+      "gemini"    
+    ],
+    imagenesJpeg: [imgSpotia1Jpeg, imgSpotia2Jpeg, imgSpotia3Jpeg,imgSpotia4Jpeg, imgSpotia5Jpeg],                                              
+    imagenesWebp: [imgSpotia1Webp, imgSpotia2Webp, imgSpotia3Webp,imgSpotia4Webp, imgSpotia5Webp],                                              
+    colores: "from-gray-900 via-green-800 to-gray-900"
+  }   
 ]

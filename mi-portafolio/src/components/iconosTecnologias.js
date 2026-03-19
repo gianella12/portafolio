@@ -8,7 +8,11 @@ import {
   SiCss3,
   SiPostgresql,
   SiVite,
-  SiTypescript
+  SiTypescript,
+  SiNextdotjs,
+  SiDocker,
+  SiDrizzle,
+  SiGooglegemini
 } from "react-icons/si"
 
 export const iconosTecnologias = {
@@ -55,6 +59,22 @@ export const iconosTecnologias = {
   javascript: {
     icono: SiJavascript,
     hover: "hover:text-yellow-400"
+  },
+  nextjs: {
+    icono: SiNextdotjs,
+    hover: "hover:text-white"
+  },
+  docker: {
+    icono: SiDocker,
+    hover: "hover:text-blue-400"
+  },
+  drizzle: {
+    icono: SiDrizzle,
+    hover: "hover:text-green-400"
+  },
+  gemini: {
+    icono: SiGooglegemini,
+    hover: "hover:text-blue-300"
   }
 }
 
