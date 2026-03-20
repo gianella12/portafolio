@@ -1,68 +1,102 @@
-import { useState } from "react"
-import { ChevronDownIcon } from "@heroicons/react/24/outline"
+import { motion } from "framer-motion"
 import { FaReact, FaNodeJs, FaGit, FaGithub } from "react-icons/fa"
 import {
   SiHtml5, SiCss3, SiJavascript, SiTypescript,
-  SiTailwindcss, SiExpress, SiMysql, SiPostgresql, SiVite,
-  SiNextdotjs, SiDocker, SiDrizzle, SiGooglegemini,
+  SiTailwindcss, SiExpress, SiMysql, SiPostgresql,
+  SiVite, SiNextdotjs, SiDocker, SiDrizzle, SiGooglegemini,
 } from "react-icons/si"
 
-const tecnologias = [
-  { Icono: SiHtml5,        hover: "group-hover:text-orange-500" },
-  { Icono: SiCss3,         hover: "group-hover:text-blue-500"   },
-  { Icono: SiJavascript,   hover: "group-hover:text-yellow-400" },
-  { Icono: SiTypescript,   hover: "group-hover:text-blue-500"   },
-  { Icono: FaReact,        hover: "group-hover:text-sky-400"    },
-  { Icono: SiNextdotjs,    hover: "group-hover:text-white"      },
-  { Icono: SiTailwindcss,  hover: "group-hover:text-cyan-400"   },
-  { Icono: SiVite,         hover: "group-hover:text-violet-400" },
-  { Icono: FaNodeJs,       hover: "group-hover:text-green-500"  },
-  { Icono: SiExpress,      hover: "group-hover:text-white"      },
-  { Icono: SiMysql,        hover: "group-hover:text-orange-500" },
-  { Icono: SiPostgresql,   hover: "group-hover:text-blue-400"   },
-  { Icono: SiDrizzle,      hover: "group-hover:text-green-400"  },
-  { Icono: SiDocker,       hover: "group-hover:text-sky-400"    },
-  { Icono: SiGooglegemini, hover: "group-hover:text-blue-300"   },
-  { Icono: FaGit,          hover: "group-hover:text-orange-500" },
-  { Icono: FaGithub,       hover: "group-hover:text-white"      },
+const categorias = [
+  {
+    label: "Frontend",
+    techs: [
+      { Icono: SiHtml5,       nombre: "HTML5",      color: "group-hover:text-orange-400" },
+      { Icono: SiCss3,        nombre: "CSS3",       color: "group-hover:text-blue-400"   },
+      { Icono: SiJavascript,  nombre: "JavaScript", color: "group-hover:text-yellow-400" },
+      { Icono: SiTypescript,  nombre: "TypeScript", color: "group-hover:text-blue-500"   },
+      { Icono: FaReact,       nombre: "React",      color: "group-hover:text-cyan-400"   },
+      { Icono: SiNextdotjs,   nombre: "Next.js",    color: "group-hover:text-white"      },
+      { Icono: SiTailwindcss, nombre: "Tailwind",   color: "group-hover:text-cyan-400"   },
+      { Icono: SiVite,        nombre: "Vite",       color: "group-hover:text-violet-400" },
+    ],
+  },
+  {
+    label: "Backend",
+    techs: [
+      { Icono: FaNodeJs,  nombre: "Node.js",  color: "group-hover:text-green-400" },
+      { Icono: SiExpress, nombre: "Express",  color: "group-hover:text-white"     },
+    ],
+  },
+  {
+    label: "Base de datos",
+    techs: [
+      { Icono: SiMysql,      nombre: "MySQL",      color: "group-hover:text-blue-400"   },
+      { Icono: SiPostgresql, nombre: "PostgreSQL",  color: "group-hover:text-indigo-400" },
+      { Icono: SiDrizzle,    nombre: "Drizzle",    color: "group-hover:text-green-400"  },
+    ],
+  },
+  {
+    label: "Herramientas",
+    techs: [
+      { Icono: SiDocker,        nombre: "Docker", color: "group-hover:text-sky-400"   },
+      { Icono: SiGooglegemini,  nombre: "Gemini", color: "group-hover:text-blue-300"  },
+      { Icono: FaGit,           nombre: "Git",    color: "group-hover:text-orange-400" },
+      { Icono: FaGithub,        nombre: "GitHub", color: "group-hover:text-white"     },
+    ],
+  },
 ]
 
-export function AcordeonStack() {
-  const [abierto, setAbierto] = useState(false)
-
+export function Stack() {
   return (
-    <div className="w-full max-w-[640px] rounded-2xl border border-white/10 overflow-hidden bg-white/5 backdrop-blur-md">
+    <section className="py-24 sm:py-32 px-5 sm:px-8">
+      <div className="max-w-5xl mx-auto">
 
-      <button
-        onClick={() => setAbierto(!abierto)}
-        className="w-full flex items-center justify-between px-5 py-4 cursor-pointer transition hover:bg-white/5"
-      >
-        <span className="text-sm text-white/50">{abierto ? "Ocultar" : "Ver tecnologías"}</span>
-        <ChevronDownIcon
-          className={`w-4 h-4 text-white/40 transition-transform duration-300 ${abierto ? "rotate-180" : ""}`}
-        />
-      </button>
+        {/* Título */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.5 }}
+          className="flex flex-col gap-3 mb-12"
+        >
+          <span className="accent-line" />
+          <h2 className="text-2xl sm:text-3xl font-bold text-white/90">Stack tecnológico</h2>
+        </motion.div>
 
-      <div
-        className={`grid transition-all duration-300 ease-in-out ${
-          abierto ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
-        }`}
-      >
-        <div className="overflow-hidden px-5 pb-5">
-          <div className="h-px bg-white/10 mb-4" />
-          <div className="grid grid-cols-5 sm:grid-cols-7 gap-3">
-            {tecnologias.map(({ Icono, hover }, i) => (
-              <div
-                key={i}
-                className="group flex items-center justify-center h-11 w-11 rounded-xl bg-white/5 border border-white/8 transition-all duration-200 hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/10"
-              >
-                <Icono className={`text-xl text-white/40 transition-colors duration-200 ${hover}`} />
+        {/* Categorías */}
+        <div className="flex flex-col gap-10">
+          {categorias.map(({ label, techs }, ci) => (
+            <motion.div
+              key={label}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.45, delay: ci * 0.07 }}
+            >
+              <p className="text-[11px] text-white/30 uppercase tracking-[0.18em] mb-4 font-medium">
+                {label}
+              </p>
+              <div className="flex flex-wrap gap-2.5">
+                {techs.map(({ Icono, nombre, color }) => (
+                  <div
+                    key={nombre}
+                    className="group flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/3 hover:bg-white/6 border border-white/7 hover:border-indigo-500/20 transition-all duration-200 hover:-translate-y-0.5 cursor-default"
+                  >
+                    <Icono className={`text-lg text-white/35 transition-colors duration-200 ${color}`} />
+                    <span className={`text-xs text-white/40 transition-colors duration-200 ${color}`}>
+                      {nombre}
+                    </span>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </motion.div>
+          ))}
         </div>
-      </div>
 
-    </div>
+      </div>
+    </section>
   )
 }
+
+// Backward compat alias
+export { Stack as AcordeonStack }

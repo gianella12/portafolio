@@ -1,26 +1,74 @@
 @import "tailwindcss";
 
-@keyframes luz {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+html {
+  scroll-behavior: smooth;
 }
 
-@keyframes respiracion {
-  0%, 100% { filter: brightness(0.9); }
-  50%       { filter: brightness(1.05); }
+/* ── Scrollbar ────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #06090f; }
+::-webkit-scrollbar-thumb { background: rgba(129,140,248,.25); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(129,140,248,.45); }
+
+/* ── Background ───────────────────────────────── */
+.bg-portfolio {
+  background-color: #06090f;
+  background-image:
+    radial-gradient(ellipse 90% 55% at 50% -10%, rgba(99,102,241,.1) 0%, transparent 65%),
+    radial-gradient(rgba(255,255,255,.018) 1px, transparent 1px);
+  background-size: 100% 100%, 28px 28px;
 }
 
-.fondo-vivo {
-  background: linear-gradient(
-    135deg,
-    #020617,
-    #080d1a,
-    #0c1628,
-    #080d1a
-  );
-  background-size: 400% 400%;
-  animation:
-    luz 45s ease infinite,
-    respiracion 16s ease-in-out infinite;
+/* ── Gradient text ────────────────────────────── */
+.text-gradient {
+  background: linear-gradient(135deg, #a5b4fc 0%, #818cf8 40%, #c4b5fd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
+
+/* ── Photo glow ring ──────────────────────────── */
+.img-ring {
+  box-shadow:
+    0 0 0 3px rgba(129,140,248,.45),
+    0 0 28px rgba(129,140,248,.18),
+    0 0 64px rgba(129,140,248,.07);
+}
+
+/* ── Section accent line ──────────────────────── */
+.accent-line {
+  display: block;
+  width: 36px;
+  height: 3px;
+  background: linear-gradient(90deg, #818cf8, #34d399);
+  border-radius: 2px;
+}
+
+/* ── Float animation ──────────────────────────── */
+@keyframes float-up {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-7px); }
+}
+.animate-float { animation: float-up 3.5s ease-in-out infinite; }
+
+/* ── Swiper navigation ────────────────────────── */
+:root {
+  --swiper-navigation-size: 18px;
+  --swiper-navigation-color: rgba(255,255,255,.45);
+}
+.swiper-button-prev,
+.swiper-button-next {
+  width: 34px !important;
+  height: 34px !important;
+  background: rgba(255,255,255,.05) !important;
+  border: 1px solid rgba(255,255,255,.1) !important;
+  border-radius: 50% !important;
+  transition: all .2s !important;
+}
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: rgba(255,255,255,.12) !important;
+  border-color: rgba(255,255,255,.2) !important;
+}
+.swiper-button-prev { left: -4px !important; }
+.swiper-button-next { right: -4px !important; }
